@@ -6,7 +6,9 @@
     <div class="btn-toolbar mb-2 mb-md-0">
     </div>
 </div>
+
 <div class="table-responsivel col-lg-8">
+  <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new post</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>
