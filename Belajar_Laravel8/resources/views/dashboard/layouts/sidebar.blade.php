@@ -27,7 +27,7 @@
           <li class="nav-item">
               <form action="/logout" method="post">
                   @csrf
-                  <button type="submit" class="nav-link d-flex align-items-center px-3 border-0">Logout <i class="bi bi-box-arrow-in-right mb-1"></i></a></li></button>
+                  <button type="submit" class="nav-link d-flex align-items-center px-3 border-0" onclick="return confirm('Are you sure?')">Logout <i class="bi bi-box-arrow-in-right mb-1"></i></a></li></button>
                 </form>
           </li>
         </ul>

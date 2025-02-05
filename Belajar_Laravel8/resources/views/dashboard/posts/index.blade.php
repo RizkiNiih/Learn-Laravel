@@ -3,11 +3,15 @@
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">My Posts</h1>
-    <div class="btn-toolbar mb-2 mb-md-0">
-    </div>
 </div>
 
-<div class="table-responsivel col-lg-8">
+@if (session()->has('success'))
+<div class="alert alert-success col-lg-9" role="alert">
+  {{ session('success') }}
+</div>
+@endif
+
+<div class="table-responsivel col-lg-9">
   <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new post</a>
     <table class="table table-striped table-sm">
       <thead>
@@ -27,7 +31,12 @@
           <td>
             <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info"><i class="bi bi-eye-fill mt-1 text-dark"></i></a>
             <a href="" class="badge bg-warning"><i class="bi bi-scissors mt-1 text-dark"></i></a>
-            <a href="/dashboard/posts/{{ $post->id }}" class="badge bg-danger"><i class="bi bi-x-circle mt-1 text-white"></i></a>
+            <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
+              @method('delete')
+              @csrf
+              <button class="badge bg-danger border-0" onclick="return confirm('Are you sure?')"><i class="bi bi-x-circle mt-1 text-white"></i></button>
+            </form>
+            
           </td>
         </tr>
         @endforeach

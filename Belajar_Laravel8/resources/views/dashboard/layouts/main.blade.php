@@ -19,7 +19,12 @@
 
     {{-- Trix Editor --}}
     <link rel="stylesheet" type="text/css" href="/css/trix.css">
-    <script type="text/javascript" src="js/trix.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+  <style>
+    trix-toolbar [data-trix-button-group="file-tools"] {
+      display: none;
+    }
+  </style>
     <link href="dashboard.css" rel="stylesheet">
   </head>
   <body>
