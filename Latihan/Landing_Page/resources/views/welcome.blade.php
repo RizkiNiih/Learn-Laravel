@@ -17,7 +17,7 @@
             <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
                 <source src="/video/video.mp4" type="video/mp4">
             </video>
-        </div>
+        </div> 
 
         <!-- Navbar -->
         <nav class="fixed bg-gray-800 bg-opacity-80 z-10 w-full">
