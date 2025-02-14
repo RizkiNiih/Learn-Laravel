@@ -55,7 +55,7 @@
         </div>
     </section>
     <section class="bg-white">
-        <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="50"class="text-center text-3xl mt-20">CURATED BY THE HOUSE</h1>
+        <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" class="text-center text-3xl mt-20">CURATED BY THE HOUSE</h1>
         <div class="grid grid-cols-4 gap-14 items-center px-20 py-20">
             <a href="#" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">
                 <div class="flex flex-col items-center text-center">
@@ -85,7 +85,7 @@
     </section>
     <section class="relative w-full flex justify-center items-center mt-2 px-4 py-4">
         <a href="#" class="relative w-full">
-            <div class="relative w-full">
+            <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full">
                 <img src="https://media.gucci.com/dynamic/b3c8/cFPWOYIzI2Ux5LWZSIH0Xrg8qSntK+92Tj3COxUcUDK8HkZWm7kPDfoTOge1NjaDbdbbdgytoUjIkbh7qQ_Boiv6bNOFNAkkgCAP8p83lrPeUCA2WoP5g+fdn2lnqQgJlvirBeTZJ9ZILQVX9hgBoVwSRqMSIGARJxSHxeKY67+i25i6a4gbeWwIKqTIljktJiA2h6x__oGGaxXTJz6i9i1AGn5WGcuT8ghTzD2Z7DA+K0vuvhGqP8ZqRh7R3I4f+s1FgEwRbUt5r4dbhzJE2G8F8bFgXuCms47OJz2kiCoALD6fD30AAYS5Dpw0MSq0s8sQEDgQlurDi_3Yyxf+gQ==/HP_CinamaticLandscape_Gucci-SS25-Jan25-1-4-0469-04-F2_001_Default.png"
                     alt="background awal" class="w-full h-auto block brightness-50">
             </div>
@@ -94,10 +94,10 @@
                     WOMEN
                 </button>
             </div>
-            <div class="absolute top-[79%] left-[57%] -translate-x-1/2 -translate-y-1/2">
+            <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" class="absolute top-[79%] left-[50%] -translate-x-1/2 -translate-y-1/2">
                 <h1 class="text-white text-3xl font-semibold">Ready-to-Wear</h1>
             </div>
-            <div class="absolute top-[88%] left-[53.5%] -translate-x-1/2 -translate-y-1/2">
+            <div data-aos="zoom-out-up" data-aos-duration="700" data-aos-delay="50" class="absolute top-[88%] left-[49.5%] -translate-x-1/2 -translate-y-1/2">
                 <button type="button" class="text-white backdrop-blur-sm border border-white rounded-sm font-medium text-sm px-4 py-3 z-[-1] transition-transform duration-500 hover:scale-95">SHOP NOW</button>
             </div>
         </a>
@@ -107,15 +107,15 @@
             FEATURED
         </h3>
         <div class="grid grid-cols-2 gap-8 px-16 mt-28">
-            <div>
+            <div data-aos="zoom-out" indata-aos-duration="1100" data-aos-delay="200">
                 <img src="https://media.gucci.com/dynamic/b3c8/4_szccSAPIVnwPrx+87GXpgiVQjnNBpAI1j0SmUQpaOcPHxdl9U7T5SZz_6lgM6DuGriiJ5Tt+uTj4T58vSl_zyObE8Xn21TbR1MNX8NDOQER_tD51i5zO9sVhod_oGYcAd2jzkssglAQ0p_NLKJxjq0jCQQPMHcCViip72hLnOPqt+56Y3aWkXuCkhDWi58bRXOMA9OVJuHSh_98hXyJyWIKjrT_bR5NNcOz2xMLcnYc2X3fCGWgduUlecphbuYW4MsIVuq5KUIOioh5kS7O91JqKuiKumzWNfEerpNpqLbY7e_eyDgFtarJfhhPV4A/HP_Portrait_Gucci-SS25-Jan25-1-24-0489-11-TU-F_001_Default.png" alt="">
             </div>
             <div class="relative flex flex-col items-center justify-center text-center">
-                <h1 class="text-3xl">WHERE LIGHT FIND US</h1>
-                <p class="mt-8">Yara Shahidi and George MacKay star in the new Spring</p>
-                <p>Summer 2025 campaign, an evocative story of balance</p>
-                <p>and connection</p>
-                <a href="#" class="text-black text text-xs font-bold mt-10">DISCOVER MORE</a>
+                <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" class="text-3xl">WHERE LIGHT FIND US</h1>
+                <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" class="mt-8">Yara Shahidi and George MacKay star in the new Spring</p>
+                <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">Summer 2025 campaign, an evocative story of balance</p>
+                <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">and connection</p>
+                <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="50"href="#" class="text-black text text-xs font-bold mt-10">DISCOVER MORE</a>
             </div>
         </div>
     </section>
@@ -124,52 +124,52 @@
         <div class="grid grid-cols-3 gap-8 px-16 mt-[5rem]">
             <div class="flex flex-col items-center">
                 <a href="#" class="w-[96%] h-[23rem]">
-                    <div class="relative w-full h-full">
+                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full h-full">
                         <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
                             <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/74082f88-a863-4aa2-87cf-89f7ec5a2c50/c6caf7d1-c55f-41d4-9095-349c6aad529e/main.mp4?fastly_token=NjdhZGI1MmJfMDczMTExMjYxNGYyMzcxY2U0MTM3YTAxZjg5ZGFmMmQ1OTRjNDdjYzU2MWRhYTljYzI3MjNkOTg0N2ViN2YzNF8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS83NDA4MmY4OC1hODYzLTRhYTItODdjZi04OWY3ZWM1YTJjNTAvYzZjYWY3ZDEtYzU1Zi00MWQ0LTkwOTUtMzQ5YzZhYWQ1MjllL21haW4ubXA0">
                         </video>
                     </div>
                 </a>
                 <p class="font-semibold text-center mt-8">COLLECT IN STORE</p>
-                <div class="font-normal text-center text-base mt-3">
+                <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" class="font-normal text-center text-base mt-3">
                     <p>Order online and collect your order from your</p>
                     <p>preferred Gucci boutique</p>
                 </div>
-                <a href="#" class="text-center underline underline-offset-8 mt-28 font-semibold">Discover how</a>
+                <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" href="#" class="text-center underline underline-offset-8 mt-28 font-semibold">Discover how</a>
             </div>
             <div class="flex flex-col items-center">
                 <a href="#" class="w-[95%] h-[23rem]">
-                    <div class="relative w-full h-full">
+                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full h-full">
                         <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
                             <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/b1b6ed0f-e667-47d8-b073-08c0695d6057/74450553-dc8e-48fd-9031-9cdaafb93a17/main.mp4?fastly_token=NjdhZGE2YzlfZDE0Y2E0YzA0NGVjOTdjNTRiZWQzMzIyZGJiZTE3MTBkZGZkZDM5OGY0M2IxZGIwMDgxYjVkMGI4ZDZiOWM0Yl8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS9iMWI2ZWQwZi1lNjY3LTQ3ZDgtYjA3My0wOGMwNjk1ZDYwNTcvNzQ0NTA1NTMtZGM4ZS00OGZkLTkwMzEtOWNkYWFmYjkzYTE3L21haW4ubXA0">
                         </video>
                     </div>
                 </a>
                 <p class="font-semibold text-center mt-8">BOOK AN APPOINTMENT</p>
-                <div class="font-normal text-center text-base mt-3">
+                <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" class="font-normal text-center text-base mt-3">
                     <p>Enjoy priority access to the boutique of your</p>
                     <p>choice at the time and date that suits you. When</p>
                     <p>you arrive, your Client Advisor will guide you</p>
                     <p>through a hand-picked selection of pieces for</p>
                     <p>you to try-on and style.</p>
                 </div>
-                <a href="#" class="text-center underline underline-offset-8 mt-10 font-semibold">Book An In Appointment</a>
+                <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" href="#" class="text-center underline underline-offset-8 mt-10 font-semibold">Book An In Appointment</a>
             </div>
             <div class="flex flex-col items-center">
                 <a href="#" class="w-[95%] h-[23rem]">
-                    <div class="relative w-full h-full">
+                    <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full h-full">
                         <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
                             <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/abb17f17-d97c-4195-a21a-02f59a85acce/fda93ab0-7fce-4b4a-9b9e-7056c0fa005b/main.mp4?fastly_token=NjdhZGI1MjlfMmRlMWRjZTBkZDhiNDdhNWFjN2E2ZjJkMzZiYWNmNjFmZTZkMjQwZTdlYjNiYjkwNGE0NDRkYTNiOTcwZDk0MF8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS9hYmIxN2YxNy1kOTdjLTQxOTUtYTIxYS0wMmY1OWE4NWFjY2UvZmRhOTNhYjAtN2ZjZS00YjRhLTliOWUtNzA1NmMwZmEwMDViL21haW4ubXA0">
                         </video>
                     </div>
                 </a>
                 <p class="font-semibold text-center mt-8">PERSONALISATION</p>
-                <div class="font-normal text-center text-base mt-3">
+                <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="font-normal text-center text-base mt-3">
                     <p>Emboss select bags,luggage,belts,leather</p>
                     <p>accessories, and items from the pet's collection</p>
                     <p>with initials to create a truly unique piece.</p>
                 </div>
-                <a href="#" class="text-center underline underline-offset-8 mt-[5.5rem] font-semibold">Discover The Collections</a>
+                <a data-aos="fade-up" data-aos-duration="700" data-aos-delay="50" href="#" class="text-center underline underline-offset-8 mt-[5.5rem] font-semibold">Discover The Collections</a>
             </div>
         </div>
     </section>
