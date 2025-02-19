@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use App\Models\Post;
+use App\Models\User;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
@@ -22,7 +23,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
-            'author' => fake()->name(),
+            'author_id' => User::factory(),
             'slug' => Str::slug(fake()->sentence()),
             'body' => fake()->text()
         ];
