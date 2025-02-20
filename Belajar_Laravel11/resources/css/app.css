@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.hijautrans{
+        @apply bg-green-500/20
+}
+.redtrans{
+        @apply bg-red-100
+}
+.bluetrans{
+    @apply bg-blue-100
+}
+.yellowtrans{
+    @apply bg-yellow-100
+}
