@@ -20,6 +20,24 @@
                       My Posts
                   </a>
               </li>
+              <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2 {{ Request::is('dashboard/profiles*') ? 'active' : '' }}" href="/dashboard/profiles">
+                      <i class="bi bi-file-earmark-text"></i>
+                      Users
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2 {{ Request::is('dashboard/products*') ? 'active' : '' }}" href="/dashboard/products">
+                      <i class="bi bi-file-earmark-text"></i>
+                      Products
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2 {{ Request::is('dashboard/books*') ? 'active' : '' }}" href="/dashboard/books">
+                      <i class="bi bi-file-earmark-text"></i>
+                      Books
+                  </a>
+              </li>
           </ul>
 
 

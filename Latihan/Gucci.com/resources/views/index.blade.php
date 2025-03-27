@@ -12,25 +12,25 @@
 <body>
     <nav class="fixed bg-white z-10 w-full shadow-md">
         <div class="grid grid-cols-2 sm:grid-cols-3 items-center px-2 sm:px-3 py-2 h-[4.5rem]">
-            <div class="hidden sm:flex items-center">
+            <div class="hidden sm:flex items-center pl-16">
                 <button class="text-sm font-medium">+ Contact Us</button>
             </div>
             <div class="inline md:flex justify-center text-2xl sm:text-4x font-serif">
                 GUCCI
             </div>
-            <div class="flex items-center space-x-4 sm:space-x-5 justify-between sm:justify-end h-4 sm:h-2 w-4 sm:w-2">
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bag w-20" viewBox="0 0 16 16">
+            <div class="flex items-center space-x-4 sm:space-x-5 justify-end pr-16">
+                <button class="w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bag w-5 h-5" viewBox="0 0 16 16">
                         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
                     </svg>
                 </button>
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <button class="w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person w-5 h-5" viewBox="0 0 16 16">
                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
                     </svg>
                 </button>
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <button class="w-6 h-6 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search w-5 h-5" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                     </svg>
                 </button>
@@ -124,7 +124,7 @@
                 <a href="#" class="w-[96%] h-[23rem]">
                     <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full h-full">
                         <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
-                            <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/74082f88-a863-4aa2-87cf-89f7ec5a2c50/c6caf7d1-c55f-41d4-9095-349c6aad529e/main.mp4?fastly_token=NjdhZGI1MmJfMDczMTExMjYxNGYyMzcxY2U0MTM3YTAxZjg5ZGFmMmQ1OTRjNDdjYzU2MWRhYTljYzI3MjNkOTg0N2ViN2YzNF8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS83NDA4MmY4OC1hODYzLTRhYTItODdjZi04OWY3ZWM1YTJjNTAvYzZjYWY3ZDEtYzU1Zi00MWQ0LTkwOTUtMzQ5YzZhYWQ1MjllL21haW4ubXA0">
+                            <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/b1b6ed0f-e667-47d8-b073-08c0695d6057/74450553-dc8e-48fd-9031-9cdaafb93a17/main.mp4?fastly_token=NjdjNTRlZTNfNThjYzkzMTEzMzQ0NmM4MWViYjE1OTU0ODgyNDhmYTdlYjA2OTRmZjc3NDFjMmMzZTE4Y2FjOTI4MzQyZTA3NF8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS9iMWI2ZWQwZi1lNjY3LTQ3ZDgtYjA3My0wOGMwNjk1ZDYwNTcvNzQ0NTA1NTMtZGM4ZS00OGZkLTkwMzEtOWNkYWFmYjkzYTE3L21haW4ubXA0">
                         </video>
                     </div>
                 </a>
@@ -139,7 +139,7 @@
                 <a href="#" class="w-[95%] h-[23rem]">
                     <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full h-full">
                         <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
-                            <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/b1b6ed0f-e667-47d8-b073-08c0695d6057/74450553-dc8e-48fd-9031-9cdaafb93a17/main.mp4?fastly_token=NjdhZGE2YzlfZDE0Y2E0YzA0NGVjOTdjNTRiZWQzMzIyZGJiZTE3MTBkZGZkZDM5OGY0M2IxZGIwMDgxYjVkMGI4ZDZiOWM0Yl8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS9iMWI2ZWQwZi1lNjY3LTQ3ZDgtYjA3My0wOGMwNjk1ZDYwNTcvNzQ0NTA1NTMtZGM4ZS00OGZkLTkwMzEtOWNkYWFmYjkzYTE3L21haW4ubXA0">
+                            <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/74082f88-a863-4aa2-87cf-89f7ec5a2c50/c6caf7d1-c55f-41d4-9095-349c6aad529e/main.mp4?fastly_token=NjdjNTRlZjZfODZmMTk0NDQ3ZDUzNWY4MDY1ODIyNjM0NGJmZjkwMDJjOTUzNzUzNWUxYzg1NWNmYjI1ODYxMjY4OWEyMzg3ZF8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS83NDA4MmY4OC1hODYzLTRhYTItODdjZi04OWY3ZWM1YTJjNTAvYzZjYWY3ZDEtYzU1Zi00MWQ0LTkwOTUtMzQ5YzZhYWQ1MjllL21haW4ubXA0">
                         </video>
                     </div>
                 </a>
@@ -157,7 +157,7 @@
                 <a href="#" class="w-[95%] h-[23rem]">
                     <div data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200" class="relative w-full h-full">
                         <video class="absolute w-full h-full object-cover" autoplay loop muted playsinline>
-                            <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/abb17f17-d97c-4195-a21a-02f59a85acce/fda93ab0-7fce-4b4a-9b9e-7056c0fa005b/main.mp4?fastly_token=NjdhZGI1MjlfMmRlMWRjZTBkZDhiNDdhNWFjN2E2ZjJkMzZiYWNmNjFmZTZkMjQwZTdlYjNiYjkwNGE0NDRkYTNiOTcwZDk0MF8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS9hYmIxN2YxNy1kOTdjLTQxOTUtYTIxYS0wMmY1OWE4NWFjY2UvZmRhOTNhYjAtN2ZjZS00YjRhLTliOWUtNzA1NmMwZmEwMDViL21haW4ubXA0">
+                            <source src="https://house-fastly-signed-eu-west-1-prod.brightcovecdn.com/media/v1/pmp4/static/clear/2924921183001/abb17f17-d97c-4195-a21a-02f59a85acce/fda93ab0-7fce-4b4a-9b9e-7056c0fa005b/main.mp4?fastly_token=NjdjNTRlZjRfYTZmYzcxZGNkMjlkYWNmYWFjNGU5ZjI5OTdhMmQ5ZjY4ZjAzNDM0NTVhNjNjNWM4OWQwNjBkNjI4YTA1YTIzZl8vL2hvdXNlLWZhc3RseS1zaWduZWQtZXUtd2VzdC0xLXByb2QuYnJpZ2h0Y292ZWNkbi5jb20vbWVkaWEvdjEvcG1wNC9zdGF0aWMvY2xlYXIvMjkyNDkyMTE4MzAwMS9hYmIxN2YxNy1kOTdjLTQxOTUtYTIxYS0wMmY1OWE4NWFjY2UvZmRhOTNhYjAtN2ZjZS00YjRhLTliOWUtNzA1NmMwZmEwMDViL21haW4ubXA0">
                         </video>
                     </div>
                 </a>
