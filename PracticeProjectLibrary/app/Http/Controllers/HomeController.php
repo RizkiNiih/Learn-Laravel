@@ -57,4 +57,15 @@ class HomeController extends Controller
             return redirect()->back()->with('message', 'Book Not Available');
         }
     }
+
+    public function book_history()
+    {
+        if(Auth::id())
+        {
+            $userid = Auth::user()->id;
+            $data = Borrow::where('user_id', '=', $userid)->get();
+        }
+
+        return view('home.book_history', compact('data'));
+    }
 }

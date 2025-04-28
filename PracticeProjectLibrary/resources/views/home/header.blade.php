@@ -19,8 +19,14 @@
 
                         @if (Route::has('login'))
                             @auth
+                            <li>
+                                <a href="{{ url('book_history') }}">My History</a>
+                            </li>
+                            
+                            <li>
                                 <x-app-layout>
                                 </x-app-layout>
+                            </li>
                         @else
                                 <li><a href="{{ route('login') }}">Login</a></li>
 
