@@ -8,14 +8,7 @@
           </div>
         </div>
 
-        @if (session()->has('message'))
-          <div class="alert alert-success">
-            <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true">x</button>
-
-          {{ session()->get('message') }}
-            
-          </div>
-        @endif
+        
         
         <div class="col-lg-6">
           <div class="filters">
