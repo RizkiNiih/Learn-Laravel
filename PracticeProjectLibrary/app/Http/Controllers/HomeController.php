@@ -68,4 +68,12 @@ class HomeController extends Controller
 
         return view('home.book_history', compact('data'));
     }
+
+    public function cancel_request($id)
+    {
+        $data = Borrow::find($id);
+        $data->delete();
+
+        return redirect()->back()->with('message', 'Book Borrow request canceled successfully');
+    }
 }
