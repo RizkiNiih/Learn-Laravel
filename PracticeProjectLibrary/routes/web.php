@@ -42,7 +42,7 @@ route::post('/update_category/{id}' ,[AdminController::class,'update_category'])
 route::get('/add_book', [AdminController::class, 'add_book']);
 route::post('/store_book', [AdminController::class, 'store_book']);
 
-route::get('/show_book', [AdminController::class, 'show_book']);
+route::get('/show_book', [AdminController::class, 'show_book'])->middleware(['auth', 'admin']);
 route::get('/book_delete/{id}', [AdminController::class, 'book_delete']);
 route::get('/book_edit/{id}', [AdminController::class, 'book_edit']);
 route::post('/book_update/{id}', [AdminController::class, 'book_update']);
@@ -50,7 +50,7 @@ route::post('/book_update/{id}', [AdminController::class, 'book_update']);
 route::get('/book_details/{id}', [HomeController::class, 'book_details']);
 
 route::get('/borrow_books/{id}', [HomeController::class, 'borrow_books']);
-route::get('/borrow_request', [AdminController::class, 'borrow_request']);
+route::get('/borrow_request', [AdminController::class, 'borrow_request'])->middleware(['auth', 'admin']);
 
 route::get('/approve_book/{id}', [AdminController::class, 'approve_book']);
 route::get('/return_book/{id}', [AdminController::class, 'return_book']);
