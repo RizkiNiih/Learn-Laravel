@@ -24,7 +24,11 @@ class AdminController extends Controller
 
             if($user_type == 'admin')
             {
-                return view('admin.index');
+                $user = User::all()->count();
+                $book = Book::all()->count();
+                $borrow = Borrow::where('status', 'approved')->count();
+                $returned = Borrow::where('status', 'returned')->count();
+                return view('admin.index', compact('user', 'book', 'borrow', 'returned'));
             }
             else if($user_type == 'user')
             {
