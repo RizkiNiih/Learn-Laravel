@@ -2,25 +2,11 @@
 <html lang="en">
 
   <head>
-
+    <base href="/public">
     @include('home.css')
     </head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
   <!-- ***** Header Area Start ***** -->
   @include('home.header')
   <!-- ***** Header Area End ***** -->
@@ -37,13 +23,15 @@
 
         
         
-        <div class="col-lg-6">
+        <div class="col-md-6" style="margin-top: 100px;">
           <div class="filters">
             <ul>
               <li data-filter="*"  class="active">All Books</li>
-              <li data-filter=".msc">Popular</li>
-              <li data-filter=".dig">Latest</li>
-              
+              @foreach ($category as $category)
+                <li>
+                  <a href="{{ url('cat_search', $category->id) }}">{{ $category->cat_title }}</a>
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>
