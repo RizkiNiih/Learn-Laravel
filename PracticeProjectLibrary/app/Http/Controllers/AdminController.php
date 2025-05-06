@@ -70,9 +70,9 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Category Deleted Successfully');
     }
 
-    public function edit_category($id)
+    public function edit_category($cat_title)
     {
-        $data = Category::find($id);
+        $data = Category::where('cat_title', $cat_title)->first();
 
         return view('admin.edit_category', compact('data'));
 

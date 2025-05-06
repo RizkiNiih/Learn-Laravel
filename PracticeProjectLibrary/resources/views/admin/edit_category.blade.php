@@ -34,7 +34,7 @@
 
                 <h2 class="title_edit">Edit Category</h2>
 
-                <form action="{{ url('update_category',$data->id) }}" method="POST">
+                <form action="{{ url('update_category',$data) }}" method="POST">
 
                     @csrf
 

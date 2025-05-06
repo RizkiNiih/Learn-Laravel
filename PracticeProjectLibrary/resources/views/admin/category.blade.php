@@ -96,7 +96,7 @@
                             <td>{{ $data->cat_title }}</td>
                             <td>
 
-                                <a class="btn btn-info" href="{{ url('edit_category', $data->id) }}">Edit</a>
+                                <a class="btn btn-info" href="{{ url('edit_category', $data->cat_title) }}">Edit</a>
 
                                 <a onclick="confirmation(event)" class="btn btn-danger" href="{{ url('cat_delete', $data->id) }}">Delete</a>
 
