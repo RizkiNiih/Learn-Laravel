@@ -55,19 +55,36 @@
                             </td>
                         </tr>
                         <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Date of Admission</td>
+                            <td class="py-3 pr-4 font-medium text-gray-700">Tanggal Lahir</td>
                             <td class="py-3">
-                                <input type="date" id="admissionDate" name="admissionDate"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                required>
+                                <input type="date" id="tanggallahir" name="tanggallahir"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                             </td>
                         </tr>
                         <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Address</td>
+                            <td class="py-3 pr-4 font-medium text-gray-700">Jenis Kelamin</td>
+                            <td class="py-3 space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="jeniskelamin" value="Laki-laki" class="text-cyan-500  focus:ring-cyan-500">
+                                    <span class="ml-2">Laki-laki</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="jeniskelamin" value="Perempuan" class="text-cyan-500 focus:ring-cyan-500">
+                                    <span class="ml-2">Perempuan</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-3 pr-4 font-medium text-gray-700">Agama</td>
                             <td class="py-3">
-                                <textarea id="address" name="address" rows="3"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                placeholder="Enter full address"></textarea>
+                                <select name="agama" id="agama" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                                    <option value="">-- Pilih Agama --</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Konghucu">Konghucu</option>
+                                </select>
                             </td>
                         </tr>
                         <tr class="border-b">
@@ -79,14 +96,24 @@
                             </td>
                         </tr>
                         <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Gender</td>
-                            <td class="py-3">
-                                <select id="gender" name="gender"
-                                        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-                                    <option value="">Select Gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
+                            <td class="py-3 pr-4 font-medium text-gray-700">Hobi</td>
+                            <td class="py-3 space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="hobi[]" value="Renang" class="text-cyan-500 focus:ring-cyan-500">
+                                    <span class="ml-2">Renang</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="hobi[]" value="Bulu Tangkis" class="text-cyan-500 focus:ring-cyan-500">
+                                    <span class="ml-2">Bulu Tangkis</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="hobi[]" value="Lari" class="text-cyan-500 focus:ring-cyan-500">
+                                    <span class="ml-2">Lari</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="hobi[]" value="Mancing" class="text-cyan-500 focus:ring-cyan-500">
+                                    <span class="ml-2">Mancing</span>
+                                </label>
                             </td>
                         </tr>
                         <tr>
