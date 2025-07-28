@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class nisn extends Model
+class Nisn extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -13,6 +13,6 @@ class nisn extends Model
     ];
 
     public function student() {
-        return $this->belongsTo(student::class);
+        return $this->belongsTo(Student::class, 'id_student');
     }
 }

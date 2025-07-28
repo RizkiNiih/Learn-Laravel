@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class student extends Model
+class Student extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -21,7 +21,7 @@ class student extends Model
         'warna',
     ];
 
-    public function nisn () {
-        return $this->hasOne(nisn::class,'id_student');
+    public function nisn() {
+        return $this->hasOne(Nisn::class, 'id_student');
     }
 }

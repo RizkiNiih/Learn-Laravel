@@ -10,5 +10,6 @@ Route::get('/', function () {
 Route::prefix('Tabel-CRUD')->name('Tabel-CRUD.')->group(function () {
     Route::get('/home', [TabelCRUDController::class, 'index'])->name('index');
     Route::get('/create', [TabelCRUDController::class, 'create'])->name('create');
+    Route::post('/store', [TabelCRUDController::class, 'store'])->name('store');
 });
 
