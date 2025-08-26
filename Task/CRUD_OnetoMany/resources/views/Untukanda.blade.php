@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Anda - Portal Berita</title>
     @vite('resources/css/app.css')
-    <title>Portal Berita - Berita Terkini</title>
     <style>
         .news-card {
             transition: all 0.3s ease;
@@ -30,25 +30,20 @@
                     <h1 class="text-2xl font-bold text-gray-900">Berita Dingin</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="{{ url('/home') }}" 
-                       class="font-medium {{ request()->is('home') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900' }}">
-                       Beranda
-                    </a>
-                    <a href="{{ url('/Untukanda') }}" 
-                       class="font-medium {{ request()->is('Untukanda') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900' }}">
-                       Untuk Anda
-                    </a>
+                    <a href="{{ url('/home') }}" class="text-gray-600 hover:text-gray-900 font-medium">Beranda</a>
+                    <a href="{{ url('/Untukanda') }}" class="text-blue-600 font-medium">Untuk Anda</a>
                 </nav>
-
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
         <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-2">Berita Terkini</h2>
-            <p class="text-gray-600 text-center">Dapatkan informasi terbaru dan terpercaya</p>
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-2">Untuk Anda</h2>
+            <p class="text-gray-600 text-center">Berita yang dipersonalisasi sesuai minat dan preferensi Anda</p>
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <article class="news-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
                 <a href="detail.html" class="block">
