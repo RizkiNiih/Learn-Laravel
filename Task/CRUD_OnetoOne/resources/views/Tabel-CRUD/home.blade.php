@@ -35,8 +35,13 @@
                 @foreach ($students as $student)
                 <div class="grid grid-cols-12 gap-4 px-6 py-4 border-b hover:bg-gray-50 transition-colors">
                     <div class="col-span-2 flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-white text-sm"></i>
+                        <div class="w-10 h-10 flex items-center justify-center">
+                            @if ($student->image && file_exists(public_path('storage/images/' . $student->image)))
+                                <img src="{{ asset('storage/images/' . $student->image) }}" alt="{{ $student->nama }}" class="w-10 h-10 rounded-full object-cover" />
+                            @else
+                                <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-white">N/A</div>
+                            @endif
+
                         </div>
                         <span class="text-gray-800 font-medium">{{ $student->nama }}</span>
                     </div>
@@ -50,10 +55,10 @@
                     <div class="break-words whitespace-normal text-gray-600">{{ $student->hobi }}</div>
                     <div class="text-gray-600">{{ $student->warna }}</div>
                     <div class="flex items-center space-x-2">
-                        <a href="" class="text-cyan-500 hover:text-cyan-600">
+                        <a href="{{ route('Tabel-CRUD.edit', $student->id) }}" class="text-cyan-500 hover:text-cyan-600">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <form action="" method="POST" onsubmit="return confirm('Are you sure?');">
+                        <form action="{{ route('Tabel-CRUD.destroy', $student->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="text-red-500 hover:text-red-600">
