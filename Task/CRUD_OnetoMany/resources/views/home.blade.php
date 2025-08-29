@@ -30,14 +30,8 @@
                     <h1 class="text-2xl font-bold text-gray-900">Berita Dingin</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="{{ url('/home') }}" 
-                       class="font-medium {{ request()->is('home') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900' }}">
-                       Beranda
-                    </a>
-                    <a href="{{ url('/Untukanda') }}" 
-                       class="font-medium {{ request()->is('Untukanda') ? 'text-blue-600' : 'text-gray-600 hover:text-gray-900' }}">
-                       Untuk Anda
-                    </a>
+                    <a href="{{ route('berita.home') }}" class="text-blue-600 font-medium">Beranda</a>
+                    <a href="{{ route('berita.Untukanda') }}" class="text-gray-600 hover:text-gray-900 font-medium">Untuk Anda</a>
                 </nav>
 
             </div>

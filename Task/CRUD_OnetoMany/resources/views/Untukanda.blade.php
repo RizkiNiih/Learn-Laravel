@@ -30,8 +30,8 @@
                     <h1 class="text-2xl font-bold text-gray-900">Berita Dingin</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="{{ url('/home') }}" class="text-gray-600 hover:text-gray-900 font-medium">Beranda</a>
-                    <a href="{{ url('/Untukanda') }}" class="text-blue-600 font-medium">Untuk Anda</a>
+                    <a href="{{ route('berita.home') }}" class="text-gray-600 hover:text-gray-900 font-medium">Beranda</a>
+                    <a href="{{ route('berita.Untukanda') }}" class="text-blue-600 font-medium">Untuk Anda</a>
                 </nav>
             </div>
         </div>
