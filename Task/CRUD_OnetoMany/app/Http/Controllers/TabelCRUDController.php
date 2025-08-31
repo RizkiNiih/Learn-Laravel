@@ -18,4 +18,9 @@ class TabelCRUDController extends Controller
         $postingan = Post::with('commment')->get();
         return view('berita.Untukanda', compact('postingan'));
     }
+
+    public function create()
+    {
+        return view("berita.create");
+    }
 }

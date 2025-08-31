@@ -31,7 +31,6 @@
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="{{ route('berita.home') }}" class="text-blue-600 font-medium">Beranda</a>
-                    <a href="{{ route('berita.Untukanda') }}" class="text-gray-600 hover:text-gray-900 font-medium">Untuk Anda</a>
                 </nav>
 
             </div>
@@ -64,9 +63,11 @@
         </div>
 
         <div class="text-center mt-12">
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200">
-                Tambah Berita Lainnya
-            </button>
+            <a href="{{ route('berita.create') }}">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200">
+                    Tambah Berita Lainnya
+                </button>
+            </a>
         </div>
     </main>
 
