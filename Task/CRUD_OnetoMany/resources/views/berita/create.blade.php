@@ -96,20 +96,7 @@
                         class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
                     ></textarea>
                 </div>
-
-                <div>
-                    <label for="tags" class="block text-sm font-semibold text-gray-700 mb-2">
-                        Tags
-                    </label>
-                    <input 
-                        type="text" 
-                        id="tags" 
-                        name="tags" 
-                        placeholder="Pisahkan dengan koma (contoh: breaking news, politik, indonesia)"
-                        class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                    >
-                </div>
-
+                
                 <div class="flex flex-col sm:flex-row gap-4 pt-6">
                     <button 
                         type="submit"
