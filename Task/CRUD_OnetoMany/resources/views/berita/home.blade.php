@@ -42,25 +42,27 @@
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-2">Berita Terkini</h2>
             <p class="text-gray-600 text-center">Dapatkan informasi terbaru dan terpercaya</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach ($posts as $post)
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <article class="news-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
                 <a href="detail.html" class="block">
                     <div class="overflow-hidden">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP.Qy9RRU1cEhNc0HxYyYhUZQAAAA?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                        <img src="{{ asset('storage/foto/' . $post->foto) }}" 
                              alt="Berita Politik Terkini" 
                              class="news-image w-full h-48 object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-blue-600">
-                            Pemerintah Umumkan Kebijakan Baru untuk Meningkatkan Perekonomian Nasional
+                            {{ $post->ringkasan }}
                         </h3>
                         <div class="flex items-center text-sm text-gray-500 mt-4">
-                            <span>2 jam yang lalu</span>
+                            <span>{{ $post->created_at->diffForHumans() }}</span>
                         </div>
                     </div>
                 </a>
             </article>
-        </div>
+            </div>
+        @endforeach
 
         <div class="text-center mt-12">
             <a href="{{ route('berita.create') }}">

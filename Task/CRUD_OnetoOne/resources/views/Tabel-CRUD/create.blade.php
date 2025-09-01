@@ -1,141 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Student Data Table</title>
+    <title>Buat Berita Baru - Portal Berita</title>
     @vite('resources/css/app.css')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .form-card {
+            transition: all 0.3s ease;
+        }
+        .form-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .input-focus {
+            transition: all 0.2s ease;
+        }
+        .input-focus:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
-    <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
-            <div class="px-6 py-4 bg-gray-50 border-b text-center">
-                <h2 class="text-4xl font-medium text-gray-800">Add Data</h2>
-            </div>
-            
-            <form class="p-6" action="{{ route('Tabel-CRUD.store') }}" method="POST" enctype="multipart/form-data">
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Buat Berita Baru</h2>
+            <p class="text-gray-600">Bagikan informasi terbaru dengan pembaca</p>
+        </div>
+
+        <div class="form-card bg-white rounded-xl shadow-lg overflow-hidden">
+            <form class="p-8 space-y-6" 
+                  action="{{ route('berita.store') }}" 
+                  method="POST" 
+                  enctype="multipart/form-data">
                 @csrf
-                <table class="w-full">
-                    <tbody>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700 w-1/4">Image</td>
-                            <td class="py-3">
-                                <input type="file" name="image" id="image" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent form-control form-control-solid mb-3 mb-lg-0 {{ $errors->get("image") ? "is-invalid border border-1 border-danger" : "" }}" value="{{ old('image') }}" />
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700 w-1/4">Name</td>
-                            <td class="py-3">
-                                <input type="text" id="nama" name="nama" 
-                                       class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                       placeholder="Enter name">
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Nis</td>
-                            <td class="py-3">
-                                <input type="number" id="nis" name="nis"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                placeholder="Enter Nis">
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Nisn</td>
-                            <td class="py-3">
-                                <input type="number" id="nisn" name="nisn"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                placeholder="Enter Nisn">
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Tempat Lahir</td>
-                            <td class="py-3">
-                                <input type="text" id="tempatlahir" name="tempatlahir"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                placeholder="Enter Tempat Lahir">
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Tanggal Lahir</td>
-                            <td class="py-3">
-                                <input type="date" id="tanggallahir" name="tanggallahir"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Jenis Kelamin</td>
-                            <td class="py-3 space-x-4">
-                                <label class="inline-flex items-center">
-                                    <input type="radio" id="jeniskelamin" name="jeniskelamin" value="Laki-laki" class="text-cyan-500  focus:ring-cyan-500">
-                                    <span class="ml-2">Laki-laki</span>
+                <div>
+                    <label for="title" class="block text-sm font-semibold text-gray-700 mb-2">
+                        Judul Berita 
+                    </label>
+                    <input 
+                        type="text" 
+                        id="title" 
+                        name="title" 
+                        value="{{ old('title') }}"
+                        required
+                        placeholder="Masukkan judul berita yang menarik..."
+                        class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg 
+                               focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    >
+                    @error('title')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div>
+                    <label for="penulis" class="block text-sm font-semibold text-gray-700 mb-2">
+                        Penulis
+                    </label>
+                    <input 
+                        type="text" 
+                        id="penulis" 
+                        name="penulis" 
+                        value="{{ old('penulis') }}"
+                        required
+                        placeholder="Nama penulis"
+                        class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg 
+                               focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                    >
+                    @error('penulis')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">
+                        Foto Berita
+                    </label>
+                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400">
+                        <div class="space-y-4">
+                            <div class="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <label for="foto" class="cursor-pointer">
+                                    <span class="text-gray-600 font-medium">Klik untuk upload gambar</span>
+                                    <p class="text-sm text-gray-500">PNG, JPG, JPEG hingga 10MB</p>
                                 </label>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" id="jeniskelamin" name="jeniskelamin" value="Perempuan" class="text-cyan-500 focus:ring-cyan-500">
-                                    <span class="ml-2">Perempuan</span>
-                                </label>
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Agama</td>
-                            <td class="py-3">
-                                <select name="agama" id="agama" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-                                    <option>-- Pilih Agama --</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Konghucu">Konghucu</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Email</td>
-                            <td class="py-3">
-                                <input type="email" id="email" name="email"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                                placeholder="Enter email address" required>
-                            </td>
-                        </tr>
-                        <tr class="border-b">
-                            <td class="py-3 pr-4 font-medium text-gray-700">Hobi</td>
-                            <td class="py-3 space-x-4">
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" id="hobi[]" name="hobi[]" value="Renang" class="text-cyan-500 focus:ring-cyan-500">
-                                    <span class="ml-2">Renang</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" id="hobi[]" name="hobi[]" value="Bulu Tangkis" class="text-cyan-500 focus:ring-cyan-500">
-                                    <span class="ml-2">Bulu Tangkis</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" id="hobi[]" name="hobi[]" value="Lari" class="text-cyan-500 focus:ring-cyan-500">
-                                    <span class="ml-2">Lari</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" id="hobi[]" name="hobi[]" value="Mancing" class="text-cyan-500 focus:ring-cyan-500">
-                                    <span class="ml-2">Mancing</span>
-                                </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 pr-4 font-medium text-gray-700">Warna</td>
-                            <td class="py-3">
-                                <input id="warna" name="warna" type="color" class="w-10 h-10 cursor-pointer"/>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                            </div>
+                        </div>
+                        <input 
+                            type="file" 
+                            id="foto" 
+                            name="foto" 
+                            required
+                            accept="image/*"
+                            class="mt-4 w-full text-sm text-gray-500 
+                                   file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 
+                                   file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 
+                                   hover:file:bg-blue-100"
+                        >
+                    </div>
+                    @error('foto')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div>
+                    <label for="ringkasan" class="block text-sm font-semibold text-gray-700 mb-2">
+                        Ringkasan Berita
+                    </label>
+                    <textarea 
+                        id="ringkasan" 
+                        name="ringkasan" 
+                        rows="3"
+                        required
+                        placeholder="Tulis ringkasan singkat berita"
+                        class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg 
+                               focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+                    >{{ old('ringkasan') }}</textarea>
+                    @error('ringkasan')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div>
+                    <label for="content" class="block text-sm font-semibold text-gray-700 mb-2">
+                        Isi Berita
+                    </label>
+                    <textarea 
+                        id="content" 
+                        name="content" 
+                        rows="12"
+                        required
+                        placeholder="Tulis isi berita lengkap di sini..."
+                        class="input-focus w-full px-4 py-3 border border-gray-300 rounded-lg 
+                               focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+                    >{{ old('content') }}</textarea>
+                    @error('content')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                </div>
                 
-                <div class="flex justify-end space-x-4 mt-6 pt-4 border-t">
-                    <button class="px-6 py-2 border bg-red-500 text-white rounded-lg hover:bg-red-700 transition-colors">
-                        <a href="{{ route('Tabel-CRUD.index') }}">Back</a>
+                <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                    <button 
+                        type="submit"
+                        class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg 
+                               transition-all duration-200 transform hover:scale-105 focus:ring-4 focus:ring-blue-200">
+                        Publikasikan Berita
                     </button>
-                    <button type="submit" 
-                            class="px-6 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors">
-                        Add Student
-                    </button>
+                    <a href="{{ route('berita.home') }}" 
+                       class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-lg 
+                              transition-all duration-200 text-center">
+                        Kembali
+                    </a>
                 </div>
             </form>
-    </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">Portal Berita</h3>
+                    <p class="text-gray-400 mb-4">
+                        Sumber berita terpercaya yang menyajikan informasi terkini dan akurat untuk masyarakat Indonesia.
+                    </p>
+                </div>  
+                <div>
+                    <h4 class="font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@portalberita.com</li>
+                        <li>Telepon: (021) 123-4567</li>
+                        <li>Alamat: Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Portal Berita. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

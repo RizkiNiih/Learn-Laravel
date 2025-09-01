@@ -10,7 +10,6 @@ Route::get('/', function () {
 
 Route::prefix('berita')->name('berita.')->group(function () {
     Route::get('/home', [TabelCRUDController::class, 'home'])->name('home');
-    Route::get('/Untukanda', [TabelCRUDController::class, 'Untukanda'])->name('Untukanda');
     Route::get('/create', [TabelCRUDController::class, 'create'])->name('create');
     Route::post('/store', [TabelCRUDController::class, 'store'])->name('store');
     Route::get('/edit/{id}', [TabelCRUDController::class, 'edit'])->name('edit');
